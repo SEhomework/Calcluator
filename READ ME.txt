@@ -5,5 +5,7 @@
       Is a small calculator
       how to do£¿Can be used on eclipse, MyEclipse, or other platforms
       Important document and sub directory structure information
+     
+      add function of square
 
                              

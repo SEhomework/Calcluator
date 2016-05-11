@@ -7,5 +7,6 @@
       Important document and sub directory structure information
      
       add function of square
+      The new ABS function, can be negative to positive
 
                              

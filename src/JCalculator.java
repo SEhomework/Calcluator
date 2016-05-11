@@ -123,6 +123,10 @@ public class JCalculator extends Frame{
    calculate();
    txt.setText("");
    s="^2";
+  }else if(bn.getLabel()=="sqrt"){
+    calculate();
+    txt.setText("");
+	s="sqrt";
   }else if(bn.getLabel()=="清空"){
    txt.setText(""); 
   }else{
@@ -141,9 +145,17 @@ public class JCalculator extends Frame{
    a/=Double.parseDouble(txt.getText());
   else if(s=="^2")
 	  a*=a;
+  else if(s=="sqrt")
+	  a=Math.sqrt(a);
+	  
   else
    a=Double.parseDouble(txt.getText());  
- } 
+ }
+
+private double sqrt(double a) {
+	// TODO Auto-generated method stub
+	return 0;
+} 
 }
 }
 class Close extends WindowAdapter{//退出系统

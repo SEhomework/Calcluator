@@ -17,8 +17,8 @@ public class JCalculator extends Frame{
  Panel panel2=null;
  Panel panel3=null;
  TextField txt;
- Button[] button=new Button[18];
- String[] string={"1","2","3","+","4","5","6","-","7","8","9","*","0",".","=","/","清空","关闭"};
+ Button[] button=new Button[19];
+ String[] string={"1","2","3","+","4","5","6","-","7","8","9","*","0",".","=","/","清空","关闭","^2",};
  static double a;
  static String s,str;//定义变量，创建对象
  
@@ -28,7 +28,7 @@ public class JCalculator extends Frame{
  }
  
  public void initialize(){//初始化窗体
-  this.setSize(180,240);
+  this.setSize(300,240);
   this.setLocation(350,200);
   this.setBackground(Color.black);
   this.setResizable(false);
@@ -118,6 +118,11 @@ public class JCalculator extends Frame{
    calculate();
    txt.setText("");
    s="/";
+  } else if(bn.getLabel()=="^2"){
+    calculate();
+	txt.setText("");
+	s="/";
+	   
   }else if(bn.getLabel()=="清空"){
    txt.setText(""); 
   }else{
@@ -127,15 +132,18 @@ public class JCalculator extends Frame{
  
  public void calculate(){//编写具体计算方法
   if(s=="+")
-   a*=Double.parseDouble(txt.getText());
+   a+=Double.parseDouble(txt.getText());
   else if(s=="-")
    a-=Double.parseDouble(txt.getText()); 
   else if(s=="*")
    a*=Double.parseDouble(txt.getText());
   else if(s=="/")
    a/=Double.parseDouble(txt.getText());
+  else if (s=="^2")
+	  a*=a;
   else
-   a=Double.parseDouble(txt.getText());  
+   a=Double.parseDouble(txt.getText()); 
+  
  } 
 }
 }

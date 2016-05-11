@@ -127,6 +127,10 @@ public class JCalculator extends Frame{
     calculate();
     txt.setText("");
 	s="sqrt";
+  }else if(bn.getLabel()=="x^y"){
+	  calculate();
+	   txt.setText("");
+	   s="x^y";
   }else if(bn.getLabel()=="Çå¿Õ"){
    txt.setText(""); 
   }else{
@@ -147,7 +151,18 @@ public class JCalculator extends Frame{
 	  a*=a;
   else if(s=="sqrt")
 	  a=Math.sqrt(a);
-	  
+    else if(s=="x^y")
+  {
+	  int temp=(int)Double.parseDouble(txt.getText());
+	  System.out.println(Double.parseDouble(txt.getText()));
+	  System.out.println(a);
+	  int sum=1;
+	  for(int i=0;i<temp;i++)
+      {
+	  sum*=a;
+      }
+	  a=sum;
+  }	  
   else
    a=Double.parseDouble(txt.getText());  
  }
